@@ -1,0 +1,49 @@
+<style>
+        h1 {
+            background: linear-gradient(to right,black,#1400c6);
+            text-align: center;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+           font-weight:700;
+           padding:10px;
+           box-shadow:0 0 15px black;
+        }
+    </style>
+    {{>navLogout}}
+
+    <div style="background-color:white"><h1 class="text-center" >Peformance Monitoring <i class="fas fa-battery-three-quarters"></i></h1></div>
+     <div class="d-flex justify-content-end">
+  {{#if info}}
+ <select class="form-select bg-dark text-light h5 mr-5 rounded border-0  px-5 py-2 " aria-label="Default select example">
+  <option class="performance-select" selected value="All">All</option>
+  
+  {{#each info}}
+  <option class="performance-select" value={{this.projname}}> {{this.projname}}</option>
+   {{/each}}
+
+</select>
+  {{/if}}
+</div>
+<div style="display:flex; justify-content:space-around; margin-top:30px; flex-wrap:wrap;">
+    {{#if info}}
+ 
+ 
+            {{#each info}}
+
+<div class="card mb-3 bg-dark perinfo" style="max-width: 400px; float:left;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/assets/images/per.png" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body text-light bg-dark">
+        <h2 class="card-title"> {{projname}}</h2>
+        <button class="btn btn-outline-light" type="button" onclick="window.location.href='/showperformance/{{id}}/{{project_id}}'" >Show Performance</button>
+      </div>
+    </div>
+  </div>
+</div>
+     {{/each}}
+        {{/if}}
+
+ </div>

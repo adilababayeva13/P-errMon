@@ -1,0 +1,95 @@
+const { json } = require("body-parser");
+const Mongoose = require("mongoose");
+const performanceSchema = new Mongoose.Schema({
+  response:{
+    type:String,
+  },
+  connect:{
+    type:String,
+  },
+  redirect:{
+    type:String,
+  }, 
+  timeOrigin:{
+    type:String,
+  },
+  connectStart:{
+    type:String,
+  },
+  navigationStart:{
+    type:String,
+  },
+  domLoading:{
+    type:String,
+  },
+  secureConnectionStart:{
+    type:String,
+  },
+  fetchStart:{
+    type:String,
+  },
+  domContentLoadedEventStart:{
+    type:String,
+  },
+  responseStart:{
+    type:String,
+  },
+  responseEnd:{
+    type:String,
+  },
+  domInteractive:{
+    type:String,
+  },
+  domainLookupEnd:{
+    type:String,
+  },
+  redirectStart:{
+    type:String,
+  },
+  requestStart:{
+    type:String,
+  },
+  unloadEventEnd:{
+    type:String,
+  },
+  unloadEventStart:{
+    type:String,
+  },
+  domComplete:{
+    type:String,
+  },
+  domainLookupStart:{
+    type:String,
+  },
+  loadEventStart:{
+    type:String,
+  },
+  domContentLoadedEventEnd:{
+    type:String,
+  },
+  redirectEnd:{
+    type:String,
+  },
+  connectEnd:{
+    type:String,
+  },
+  apikey2:{
+    type:String,
+  },
+  date:{
+    type:Date,
+  },
+  projectkey2:{
+    type:String,
+  },
+  navigation:{
+    type : JSON
+  }
+
+});
+
+module.exports = Mongoose.model(
+  "performanceModel",
+  performanceSchema,
+  "PERFORMANCE_COLLECTION"
+);

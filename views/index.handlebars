@@ -1,0 +1,155 @@
+
+<div class="container-fluid">
+{{#if checkFalse}}
+{{>navLogout}}
+{{/if}}
+{{#if checkTrue}}
+{{>navLogin}}
+{{/if}}
+
+<style>
+  .prb1{
+    font-size:70px
+  }
+  @media only screen and (max-width: 1320px) {
+ .prb1{
+    font-size:60px
+  }
+  
+}
+ @media only screen and (max-width: 1024px) {
+ .prb1{
+    font-size:50px;
+    padding-left: 100px;
+    
+  }
+  #not{
+    display: none;
+  }
+  #foto{
+    max-width: 300px;
+  }
+  
+}
+  @media only screen and (max-width: 762px) {
+ 
+  
+}
+</style>
+<div class="row" id="not" style="border-bottom-left-radius:100%; border-bottom:2px solid black;box-shadow:0px 10px 25px black; ">
+    <div class="col-6">
+    <img src="/assets/images/player.png" width=""alt="">
+    </div>
+
+    <div class="col-6">
+    <div style="font-weight:700; text-shadow: 1px 2px 0px #ff0028; ;   font-variant: small-caps;" class="prb1" >Be the one to SCORE,</div>
+     <div style="font-weight:700; text-shadow: 1px 2px 0px #ff0028;    font-variant: small-caps;" class="prb1">not your ERRORS!</div>
+     <button onclick="window.location.href='/projects'" class="btn btn-dark p-3" style="margin-left:300px;margin-top:30px;width:40%;" id="not">START NOW</button>
+    </div>
+
+</div>
+
+
+    <div class="row" style="box-shadow: -1px 25px 19px -9px rgba(0,0,0,0.75);margin-top:50px;">
+    
+        <h1 style="text-align: center; margin:40px auto;font-weight:700;">Why use P-ERRMON ?</h1>
+    </div>
+
+    <div class="row" style="display:flex; flex-direction:row; justify-content:space-around;">
+{{!-- why use card -1 --}}
+    <div class="col-lg-3 col-md-4 col-sm-5 col-10 my-2">
+        <div class="card p-2" style="height:100%;" >
+  <img src="/assets/images/free.png"   class="card-img-top">
+  <div class="card-body">
+    <h5 class="card-title">IT'S FREE TO USE!</h5>
+    <p class="card-text">P-errMon is free tool to use.Our goal is for more users to access and use such tools.</p>
+   
+  </div>
+</div>
+    </div>
+  {{!-- why use card -2 --}}
+     <div class="col-lg-3 col-md-4 col-sm-5 col-10 my-2 ">
+        <div class="card p-2"style="height:100%;" >
+  <img src="/assets/images/humans.png"    class="card-img-top">
+  <div class="card-body">
+    <h5 class="card-title">IT'S IMPROVING DAY-BY-DAY!</h5>
+    <p class="card-text">P-errMon is open-source and it has large community. That's why it is improved by great developers day-by-day.</p>
+   
+  </div>
+</div>
+    </div>
+  {{!-- why use card -3 --}}
+     <div class="col-lg-3 col-md-4  col-sm-5 col-10 my-2 ">
+        <div class="card p-2"style="height:100%;" >
+  <img src="/assets/images/easy.png"    class="card-img-top">
+  <div class="card-body">
+    <h5 class="card-title">IT HAS SIMPLE GUI!</h5>
+    <p class="card-text">As a developer, we know how difficult your job is from time to time. For this reason, it is our priority to make your job easy and not make things difficult.</p>
+   
+  </div>
+</div>
+    </div>
+    </div>
+</div> 
+
+{{!-- dead zone --}}
+<div class="row" style="box-shadow: -1px 25px 19px -9px rgba(0,0,0,0.75);margin-top:50px;">
+  <h1 style="text-align: center; margin:40px auto;font-weight:700;">HOW TO USE ?</h1>
+</div>
+ 
+     <div class="card text-center bg-dark text-white m-4">
+  <div class="card-header">
+    <i class="fas fa-plus"></i> ADD YOUR PROJECT
+  </div>
+   <ul class="list-group list-group-flush text-dark">
+    <li class="list-group-item">1. Create your PROJECT</li>
+    <li class="list-group-item">2. Take the script</li>
+    <li class="list-group-item">3. Write the script inside the head tag</li>
+  </ul>
+  <div class="card-body">
+   <div class="row" style="margin:0px auto; display:flex; justify-content:center;">
+<a href="/projects" class="btn btn-warning m-2">Go to creat your first project!</a>
+<a href="/docs" class="btn btn-info m-2">More information!</a>
+   </div>
+    
+  </div>
+</div>
+
+<div class="row" style="box-shadow: -1px 25px 19px -9px rgba(0,0,0,0.75);margin-top:50px;">
+  <h1 style="text-align: center; margin:40px auto;font-weight:700;">Feature Highlights</h1>
+</div>
+
+
+{{!-- performance and error divs start --}}
+<div class="row" style="display:flex; justify-content:space-around;">
+    <div class="col-xl-5 col-md-11 p-3" style="box-shadow: 0px 1px 20px  #657a00;background:#657a00; ">
+        <div class="row">   <img src="/assets/images/404.png" style="width:15%; margin:10px auto;" alt=""></div>
+     
+      <div class="row text-white">  <h1 style="font-weight:700; margin:10px auto; ">ERROR MONITORING</h1>
+              Bask in the peace of mind that comes from comprehensive error monitoring and enriched context for app
+            issues.Whenever a new error impacts your users, P-Errmon alerts you in real-time via email or using one our
+            messaging integrations.Backtraces and breadcrumbs show the exact events causing an error, so you can
+            understand and reproduce any issue.
+      </div>
+    
+    </div>
+
+    <div class="p-3 col-xl-5 col-md-11" style="box-shadow: 0px 1px 20px #1400c6; background-color: #1400c6;">
+           <div class="row">   <img src="/assets/images/perfor.png" style="width:15%; margin:10px auto;" alt=""></div>
+     
+      <div class="row text-white">  <h1 style="font-weight:700; margin:10px auto; ">PERFORMANCE MONITORING</h1>
+              Understand the health of your total app stack - not just your code - and turn performance data into
+            actionable insights.Simple, actionable insights help measure the overall quality of your application, not
+            just response times.
+      </div>
+    </div>
+
+
+    {{!-- footer start --}}
+</div>
+ <footer class="container-fluid  text-center p-4  border-top rounded border-dark"
+        style="background:black; margin-top:50px;">
+
+        <p class="text-light  m-0">P-Errmon - EA Bootcamp - © 2021 - All Rights Reserved</p>
+    </footer>
+</div>

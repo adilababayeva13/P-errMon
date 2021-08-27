@@ -1,0 +1,146 @@
+    <style>
+               h2 {
+            background: linear-gradient(to right,black,#1400c6);
+            text-align: center;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+           font-weight:700;
+           padding:10px;
+           box-shadow:0 0 15px black;
+        }
+            h1 {
+            background: linear-gradient(to right,#ff0028,#beef00);
+            text-align: center;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+           font-weight:700;
+           padding:10px;
+                 }
+        
+    </style>
+        <div style="background-color:white">  <h2 style="font-weight: 700; font-size:50px;margin:5px auto;" class="text-center">Error details</h2></div>
+
+{{#if errordata}}
+<div style="display:flex; justify-content:center;">
+<table class="table table-dark m-5" style="width:70%; box-shadow:0px 0px 20px black;">
+
+  <tbody>
+       {{#if colno}}
+    <tr>
+      <td class="table-primary text-dark font-weight-bold
+ text-center">Column Number</td>
+      <td class="text-center">{{colno}}</td>
+ </tr>
+{{/if}}
+
+{{#if lineno}}
+      <tr>
+      <td class="table-secondary text-dark font-weight-bold
+ text-center">Line Number</td>
+      <td class="text-center">{{lineno}}</td>
+     </tr>
+{{/if}}
+ 
+ {{#if filename}}
+    <tr>
+      <td class="table-success text-dark font-weight-bold
+ text-center">File Name</td>
+      <td class="text-center">{{filename}}</td>
+     </tr>
+{{/if}}
+
+{{#if message}}
+         <tr>
+      <td class="table-danger text-dark font-weight-bold
+ text-center">Error Message</td>
+      <td class="text-center">{{message}}</td>
+     </tr>
+{{/if}}
+
+{{#if projectname}}
+         <tr>
+      <td class="table-success text-dark font-weight-bold
+ text-center">Project Name</td>
+      <td class="text-center">{{projectname}}</td>
+     </tr>
+{{/if}}
+
+{{#if tagname}}
+         <tr>
+      <td class="table-danger text-dark font-weight-bold
+ text-center">TagName</td>
+      <td class="text-center">{{tagname}}</td>
+     </tr>
+{{/if}}
+
+{{#if currentSrc}}
+         <tr>
+      <td class="table-warning text-dark font-weight-bold
+ text-center">currentSrc</td>
+      <td class="text-center">{{currentSrc}}</td>
+     </tr>
+{{/if}}
+            <tr>
+      <td  class="table-info text-dark font-weight-bold
+ text-center">Date</td>
+      <td class="text-center">{{date}}</td>
+     </tr>
+
+               <tr>
+      <td class="table-light text-dark font-weight-bold
+ text-center">Cookie Enabled</td>
+      <td class="text-center">{{cookieEnabled}}</td>
+     </tr>
+
+     <tr>
+      <td class="table-primary text-dark font-weight-bold
+ text-center">On Line</td>
+      <td class="text-center">{{onLine}}</td>
+     </tr>
+
+          <tr>
+      <td class="table-secondary text-dark font-weight-bold
+ text-center">Language</td>
+      <td class="text-center">{{language}}</td>
+     </tr>
+
+              <tr>
+      <td class="table-success text-dark font-weight-bold
+ text-center">User Agent</td>
+      <td class="text-center">{{userAgent}}</td>
+     </tr>
+
+                  <tr>
+      <td class="table-danger text-dark font-weight-bold
+ text-center">Platform</td>
+      <td class="text-center">{{platform}}</td>
+     </tr>
+
+                    <tr>
+      <td class="table-warning text-dark font-weight-bold
+ text-center">App Name</td>
+      <td class="text-center">{{ appName}}</td>
+     </tr>
+
+                     <tr>
+      <td class="table-info text-dark font-weight-bold
+ text-center">App Version</td>
+      <td class="text-center">{{appVersion}}</td>
+     </tr>
+                      <tr>
+      <td class="table-light text-dark font-weight-bold
+ text-center">App CodeName</td>
+      <td class="text-center">{{appCodeName}}</td>
+     </tr>
+
+                        <tr>
+      <td class="table-primary text-dark font-weight-bold
+ text-center"s>ProjectKey</td>
+      <td class="text-center">{{ projectkey}}</td>
+     </tr>
+
+   </tbody>
+</table>
+   </div>
+{{/if}}
+

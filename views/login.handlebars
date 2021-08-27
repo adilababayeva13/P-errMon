@@ -1,0 +1,58 @@
+{{>navLogin}}
+<div class="container">
+  <div class="row">
+    {{!--  login divi baslayir --}}
+    <div class="col-xl-6 col-lg-12  bubble">
+      <form
+        action="login"
+        method="POST"
+        class="w-75"
+        style="margin-top:13%; margin-left:13%;"
+      >
+        <h1
+          style="font-weight:700;"
+        >Login</h1>
+        <hr />
+        {{#if message}}
+          {{#each message}}
+            <div class="alert alert-danger ">
+              {{msg}}
+            </div>
+          {{/each}}
+        {{/if}}
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            name="email"
+            class="form-control"
+            placeholder="Email"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="password"
+            name="password"
+            class="form-control"
+            placeholder="password"
+          />
+        </div>
+        <input type="submit" class="btn btn-outline-dark w-100" value="Login" />
+                  
+            </form>
+
+    </div>
+       {{!--  login divi bitir --}}
+    <div class="col-xl-6 col-lg-12 d-flex  justify-content-center flex-column " >
+     <h2  style="font-weight:600;"  class="py-4 text-center">Don't have an account?</h2>
+     <div class="row  justify-content-center" >
+       <img src="/assets/images/spray.png"style="width:38%;margin:10px;" alt="">
+       <img src="/assets/images/error.png"style="width:15%;height:40%;margin:30px;" alt="">
+     </div>
+     <div class="row justify-content-center py-1 my-1" >
+     <h3 style="font-weight:600;">Clean errors with us !</h3>  
+     <span onclick="window.location.href='/signup'" class="btn btn-dark"style="width:130px;margin-left:10px;">Sign Up</span>
+     </div>
+     
+    </div>
+  </div>
+</div>

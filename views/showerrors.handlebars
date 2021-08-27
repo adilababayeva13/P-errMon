@@ -1,0 +1,76 @@
+<style>
+
+
+        h1 {
+            background: linear-gradient(to right,black,#1400c6);
+            text-align: center;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+           font-weight:700;
+           padding:10px;
+           box-shadow:0 0 15px black;
+        }
+
+        .fa {
+            font-size: 25px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .trash {
+            background-color: #ed2939;
+            height: 40px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+     </style>
+   
+    {{>navLogout}}
+     <div  style="background-color:white"><h1 class="text-center ">Error Monitoring <i class="fas fa-bomb"></i></h1></div>
+      
+        {{#if errarr}}
+
+  <div class="d-flex justify-content-end">
+ <select class="form-select bg-dark text-light h5 mr-5 rounded border-0  px-5 py-2 " aria-label="Default select example">
+  <option class="error-select" selected value="All">All</option>
+   {{#if projects}}
+  {{#each projects}}
+  <option class="error-select" value={{this.name}}> {{this.name}}</option>
+   {{/each}}
+  {{/if}}
+</select>
+</div>
+ 
+ 
+         
+         
+
+<div class="row col-lg-12" style="display:flex; justify-content:space-around; margin-top:30px;">
+  
+            {{#each errarr}}
+            
+<div class="card mb-3 bg-dark appinfo" style="max-width: 400px; float:left;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/assets/images/err.png" class="img-fluid rounded-start" style="width:80%" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body text-light bg-dark">
+      
+        <h2 class="card-title"> {{this.projectname}}</h2> 
+        <p>{{this.message}}</p>
+        <button class="btn btn-outline-light" type="button" onclick="window.location.href='showerrors/{{this.userkey}}/{{this.projectkey}}/{{this.errorKey}}'" >ERROR DETAILS</button>
+         <span class="trash  float-right"><i class="fa fa-trash errorDelete" aria-hidden="true"  data-error_id="{{this.errorKey}}"></i></span>
+      </div>
+    </div>
+  </div>
+</div>
+            {{/each}}</div>
+
+        {{/if}}
+
+    </div>
+

@@ -1,0 +1,49 @@
+<div
+  class="modal fade modal-dialog"
+  id="{{this.name}}"
+  style="position:absolute; margin-left:35%; "
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">
+    
+          Setup&Configuration 
+           <div class="h6">Write the scripts inside head tag.</div>
+        </h5>
+       
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true"> 
+            &times;
+          </span>
+        </button>
+      </div>
+    
+      <div class="modal-body copiedBody">
+        <pre>
+
+&lt;script src="<span>{{this.fullUrl}}</span>/p-err/
+run.js"&gt;&lt;/script&gt;
+</pre>
+<pre >&lt;script&gt;
+    PerrMonRun (
+    "{{project_id}}",
+    "{{user_id}}" 
+              );
+    &lt;/script&gt;
+</pre>  
+</div>
+      <div class="modal-footer">
+        <button class="copy-clipboard btn btn-info" style="color:white">Copy</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

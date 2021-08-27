@@ -1,0 +1,105 @@
+{{>navLogin}}
+<div
+  class="container-fluid"
+
+>
+
+  <div class="container">
+
+    <div class="mdl2">
+      <div class="row">
+  <div class="col-md-6 col-sm-12 sekiller">
+        <img src="/assets/images/1.png" alt="" style="position:relative; margin-top:2%; margin-left:6%; width:25%;" >
+        <img src="/assets/images/2.png" alt="" style="position:relative; margin-top:5%; margin-left:30%;width:25%;">
+        <img src="/assets/images/3.png" alt="" style="position:relative; margin-top:9%;  margin-left:63%;width:25%;">
+        <img src="/assets/images/4.png" alt="" style="position:relative; margin-top:5%; margin-left:37%;width:25%;">
+        <img src="/assets/images/5.png" alt="" style="position:relative; margin-top:-5%; margin-left:78%;width:25%;">
+
+        </div>
+        <div class="col-md-6 col-sm-12 animate__animated animate__flipInY">
+          {{#if message}}
+            {{#each message}}
+              <div class="alert alert-danger">
+                {{msg}}
+              </div>
+            {{/each}}
+          {{/if}}
+          <form
+            action="signup"
+            method="POST"
+            class="w-75 signUpForm"
+            style="margin-top:20px"
+          >
+            <h1
+              class="animate__animated animate__swing"
+              style="font-weight:700;"
+             
+            >Sign Up!</h1>
+            <hr />
+
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                name="firstname"
+                class="form-control animate__animated animate__swing"
+                placeholder="Firstname"
+                style="margin-bottom: 10px;"
+              />
+            </div>
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                name="lastname"
+                class="form-control animate__animated animate__swing"
+                placeholder="Lastname"
+                style="margin-bottom: 10px;"
+              />
+            </div>
+
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                name="email"
+                class="form-control animate__animated animate__swing"
+                placeholder="Email"
+                style="margin-bottom: 10px;"
+              />
+            </div>
+            <div class="input-group mb-3">
+              <input
+                type="password"
+                name="password"
+                class="form-control animate__animated animate__swing"
+                placeholder="Password"
+                style="margin-bottom: 20px;"
+              />
+            </div>
+            <div class="input-group mb-3">
+              <input
+                name="passwordAgain"
+                type="password"
+                name="password"
+                class="form-control animate__animated animate__swing"
+                placeholder="Password again"
+                style="margin-bottom: 20px;"
+              />
+            </div>
+            <input
+              type="submit"
+              class="btn btn-outline-dark w-100"
+              
+              value="Sign up"
+            />
+
+            <h6
+              style="margin-top: 10px; font-family:Verdana, Geneva, Tahoma, sans-serif; color:black;"
+            >You have already an account? <a href="/login"> Login</a></h6>
+          </form>
+        </div>
+
+      
+      </div>
+    </div>
+  </div>
+
+</div>
